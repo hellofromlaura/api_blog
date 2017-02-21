@@ -45,8 +45,6 @@ app.delete('/blog-posts/:id', (req, res) => {
 });
 
 app.put('/blog-posts/:id', jsonParser, (req, res) => {
-	console.log(req.params);
-	console.log(req.body);
   const requiredFields = ['id', 'title', 'content', 'author', 'publishDate'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
